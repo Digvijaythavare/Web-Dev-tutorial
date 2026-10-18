@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Web Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111c33;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 65px 8%;
+            scroll-margin-top: 75px;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 56px);
+            margin: 12px 0;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 11px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #7dd3fc;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 24px;
+            color: #38bdf8;
+        }
+
+        .about p {
+            max-width: 750px;
+            color: #cbd5e1;
+        }
+
+        .skills, .projects, .education {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(200px, 1fr)
+            );
+            gap: 18px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 24px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #7dd3fc;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 14px;
+        }
+
+        .card a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact p {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            background: #111c33;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MyPortfolio</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <p>Hello, welcome to my portfolio!</p>
+
+        <h1>I'm <span>Your Name</span></h1>
+
+        <h3>Python Developer | Aspiring IT Professional</h3>
+
+        <p>
+            I am a motivated fresher who enjoys programming,
+            solving problems, learning new technologies,
+            and building useful projects.
+        </p>
+
+        <a href="#projects" class="button">Explore My Projects</a>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+
+        <p>
+            Hello! I am a passionate learner interested in
+            software development and technology. I am improving
+            my programming skills by practising Python, SQL,
+            HTML, CSS, and JavaScript. My goal is to build
+            practical projects and start my IT career.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <div class="card">
+                <h3>Python</h3>
+                <p>Programming fundamentals and problem solving.</p>
+            </div>
+
+            <div class="card">
+                <h3>SQL</h3>
+                <p>Queries, filtering, sorting, and database basics.</p>
+            </div>
+
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <p>Building and styling responsive web pages.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Learning variables, conditions, functions, and DOM.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+            <div class="card">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A responsive website to showcase my skills,
+                    education, projects, and contact information.
+                </p>
+                <a href="https://github.com/YOUR-USERNAME/YOUR-REPO"
+                   target="_blank" rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Python Projects</h3>
+                <p>
+                    A collection of beginner Python programs
+                    demonstrating logic, functions, and conditions.
+                </p>
+                <a href="https://github.com/YOUR-USERNAME"
+                   target="_blank" rel="noopener noreferrer">
+                    View GitHub Profile →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>SQL Practice</h3>
+                <p>
+                    Practical SQL queries for retrieving,
+                    filtering, and analysing sample data.
+                </p>
+                <a href="https://github.com/YOUR-USERNAME"
+                   target="_blank" rel="noopener noreferrer">
+                    View GitHub Profile →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="education">
+            <div class="card">
+                <h3>Your Degree</h3>
+                <p>College or University Name</p>
+                <p>Graduation Year: YYYY</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+
+        <p>Email: your.email@example.com</p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/YOUR-USERNAME"
+               target="_blank" rel="noopener noreferrer">
+                My GitHub Profile
+            </a>
+        </p>
+
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer">
+                My LinkedIn
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>
+            &copy; <span id="year"></span> Your Name.
+            All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
